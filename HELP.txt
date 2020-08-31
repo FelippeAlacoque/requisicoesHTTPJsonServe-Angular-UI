@@ -1,0 +1,28 @@
+Exemplo de requisições HTTP (GET, POST, PUT e DELETE) utilizando ANGULAR
+
+1) Bootstrap utilizado para formatar a apresentação do HMTL
+   instalar bootstrap: npm install bootstrap@3.3.7 --save
+   importar o CSS do bootstrap no arquivo angular.json, na propriedade styles: "../node_modules/bootstrap/dist/css/bootstrap.css",
+   
+2) Para simular um backend foi uitilizado o JsonServe, que disponibiliza os recursos das requisições HTTP
+   instalar JsonServer: npm install -g json-server
+   informações: https://github.com/typicode/json-server
+       2.1) criar o arquivo db.json na pasta data/db.json
+       2.2) iniciar o JsonServer: json-server --watch data/db.json
+       2.3) as requisições podem ser testadas utilizando o postman. No console do VS CODE é apresenta a url para acessa aos serições (http://localhost:3000/pessoas)
+       
+3) criar o serviço PessoaService.ts
+   na pasta do projeto: ng g s pessoa --skiptests
+4) importar o serviço criado no meta dado providers do app.component.ts
+   providers: [PessoaService]
+5) importar:  
+   import { FormsModule } from '@angular/forms'; 
+   import { HttpModule } from '@angular/http'; no app.component.ts
+6) No serviço criado importar as dependências 
+	 import { Http } from '@angular/http';
+	 import 'rxjs/add/operator/toPromise';
+7) injetar no serviço a dependência do modulo HTTP do angular 
+    constructor(private http: Http) { }
+8) injetar no app.component.ts a dependência do serviço criado
+    constructor(private pessoaService: PessoaService) {}
+	
