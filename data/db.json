@@ -1,0 +1,24 @@
+{
+  "pessoas": [
+    {
+      "nome": "João da Silva Mariano",
+      "telefone": "(31) 3333-3333",
+      "id": 1
+    },
+    {
+      "nome": "Francisco dos Santos",
+      "telefone": "(31) 4444-4444",
+      "id": 2
+    },
+    {
+      "nome": "Maria Aparecida",
+      "telefone": "(31) 5555-5555",
+      "id": 3
+    },
+    {
+      "nome": "Antônio dos Reis",
+      "telefone": "(31) 6666-6666",
+      "id": 4
+    }
+  ]
+}
